@@ -1,0 +1,931 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Root Variable */
+:root {
+   --darkSkyblue-color : #2e68b3;
+   --skyblue-color:#347dc0;
+}
+
+
+/* General css */
+
+.card-img {
+   padding: 2rem 1rem;
+
+ }
+
+ .card-img img {
+   border-radius: 2rem;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+/* Custom scrollbar */
+
+ ::-webkit-scrollbar{
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+ background-color:var(--skyblue-color);
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: var(--darkSkyblue-color);
+}
+
+
+/* 
+ribban-bar css */
+
+.header .ribban-bar{
+   background-color: var(--darkSkyblue-color);
+   color: white;
+   font-weight: 600;
+   font-size: 14px;
+   text-decoration: none;
+   height: 40px;
+   line-height: 40px;
+
+  
+}
+
+.header .ribban-bar a{
+    text-decoration: none;
+    color: white;
+ }
+
+ .header .upload-resume a{
+    margin-top: 0.1rem;  
+    padding: 0.3rem 1rem; 
+    border: 2px dotted white;
+    background-color: white;
+    color: var(--skyblue-color);
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+ }
+
+ .header .upload-resume a:hover{
+   background-color: var(--skyblue-color);
+   color: white;
+ }
+
+ 
+
+ .header .ribban-bar .social-icon,
+ .header .ribban-bar .social-icon ul li {
+   display: inline;
+   margin-right: 1rem;
+
+ }
+
+
+ /* Navigation bar */
+
+ .header .nav-item {
+  background-color: white;
+  text-align: center;
+  position: relative;
+
+ }
+
+
+
+ .header .nav-item .nav-link{
+ position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--skyblue-color);
+ }
+
+
+
+ .header .nav-item .nav-link::after {
+   position: absolute;
+   content: '';
+   left: 0;
+   width: 0%;
+   height: 2px;
+   background-color: var(--darkSkyblue-color);
+   transition: 0.3s;
+   bottom: 0;
+ }
+
+ .header .nav-item .nav-link.active::after,
+ .header .nav-item .nav-link:hover::after{
+  width: 100%;
+ }
+
+
+
+.header .nav-item .nav-link.active,
+.header .nav-item .nav-link:hover{
+         color: red;
+}
+
+
+
+
+.header .dropdown ul li{
+ border-bottom: 1px solid gray;
+ padding-top: 0.5rem;
+ padding-bottom: 0.5rem;
+
+ 
+}
+
+.header .dropdown ul li a:focus,
+.header .dropdown ul li a:hover {
+  color: var(--skyblue-color);
+  background-color: white;
+
+}
+
+.header .dropdown:hover .dropdown-menu {
+  display: block;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+
+}
+
+
+
+
+
+ .header button {
+  color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color:var(--darkSkyblue-color);
+ }
+ .header button:focus {
+    border : none!important;
+    box-shadow: unset;
+ }
+
+
+  .header-scrolled {
+  position: fixed;
+    top: 0rem;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(12,0,46,.05);
+    box-shadow: 0 4px 8px 0 rgba(12,0,46,.05);
+
+ }
+
+ /* Notification bar */
+
+ .notification span,
+ .notification {
+    height: 3rem;
+    background-color: rgb(232, 249, 255);
+    line-height: 3rem;
+    font-weight: 700;
+    color: var(--darkSkyblue-color);
+    /* margin-top: 7rem; */
+ }
+
+
+ /* banner section */
+ 
+ .banner .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+ }
+
+ .job-seekar .card {
+  border-radius: 2rem;
+  min-height: 400px;
+  /* border: none; */
+ }
+
+ .job-seekar img {
+  transition: 0.5s ease-in-out;
+  
+ }
+
+ .job-seekar img:hover {
+  transform: scale(1.1);
+  
+ }
+
+
+ .job-seekar .card .card-body .card-title a{
+  color: black;
+  font-weight: 700;
+ }
+
+ .job-seekar .card .card-body .card-title a:hover{
+ color: var(--darkSkyblue-color);
+ }
+
+ .job-seekar .job-link {
+  font-weight: 550;
+  transition: 0.2s ease-in-out;
+ }
+ .job-seekar .job-link:hover {
+  color: red;
+ }
+
+ .job-seekar .title {
+   font-size: 2rem;
+   font-weight: 600;
+ }
+
+ .job-seekar .opp-title {
+    color: var(--skyblue-color);
+   font-weight: 700;
+   font-size: 1.2rem;
+   text-transform: uppercase;
+ }
+
+
+
+
+
+
+ /* our client section */
+
+ .our-client {
+   margin-top: 6rem;
+   overflow: hidden;
+ 
+ }
+
+ .our-client img {
+  transition: 0.5s ease-in-out;
+ 
+ }
+
+ .our-client img:hover {
+  transform: scale(1.1);
+  
+ }
+
+ .our-client .card .card-body .card-title a{
+  color: black;
+  font-weight: 700;
+
+}
+
+.our-client .card .card-body .card-title a:hover{
+  color: var(--darkSkyblue-color);
+
+}
+
+.our-client .card .card-body .card-link {
+  font-weight: 550;
+  transition: 0.2s ease-in-out;
+}
+
+.our-client .card .card-body .card-link:hover {
+  transition: 0.3s ease-in-out;
+}
+.our-client .card .card-body .card-link:hover {
+  color: red;
+}
+
+
+
+ .our-client .card{
+ min-height: 400px;
+ border-radius: 40px;
+ border: none;
+
+}
+ .our-client .card .card-link{
+  padding-top: 2rem;
+ 
+ }
+
+ .our-client .client-text h5{
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--darkSkyblue-color);
+ 
+ }
+
+
+
+
+ /* about section */
+
+ .about h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(31, 26, 26);
+ }
+
+ .about p {
+font-weight: 540;
+font-size: 1rem;
+text-align: justify;
+color: rgb(114, 113, 113);
+ }
+ 
+
+ .about .about-img {
+  margin-top: -8rem;
+  margin-left: 8rem;
+ 
+ }
+.about .about-btn  {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--darkSkyblue-color);
+  margin-top: 1.6rem;
+  margin-bottom: 5rem;
+  transition: 0.5s ease-in-out;
+  font-weight: 700;
+  color: white;
+  
+   
+}
+
+.about .about-btn:focus,
+.about .about-btn:hover{
+  background-color: red;
+  box-shadow: none;
+
+   
+}
+
+
+
+ /* consultant section */
+
+ .Consultants {
+   background: url("../assets/img/consultant/cta2-bg.webp");
+   background-repeat: no-repeat;
+   background-position: center;
+
+
+ }
+
+ .Consultants .need-business {
+   padding: 6rem;
+   padding-bottom: 8rem;
+   
+ }
+ 
+
+ .Consultants .need-business h4{
+color: white;
+font-weight: 600;
+font-size: 1.8rem;
+
+}
+
+.Consultants .business-sm-text {
+  color: var(--darkSkyblue-color);
+}
+
+.Consultants .need-business .btn-together{
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--darkSkyblue-color);
+  margin-top: 1.6rem;
+  margin-bottom: 5rem;
+  transition: 0.5s ease-in-out;
+  font-weight: 700;
+  color: white;
+
+}
+
+
+.Consultants .need-business .btn-together:focus,
+.Consultants .need-business .btn-together:hover{
+  background-color: red;
+  box-shadow: none;
+
+   
+}
+
+.question-business {
+  margin-top: -4rem;
+}
+ .question-business h5{
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+ 
+  }
+ 
+   /* jobs-skill section */
+
+
+  .Jobs-skill {
+    margin-top: 5rem;
+    
+    
+  
+  }
+
+  
+
+
+  .Jobs-skill .list-group-item.active,
+  .Jobs-skill .list-group-item:hover{
+    background-color: var(--darkSkyblue-color);
+    color: white;
+  }
+  .Jobs-skill .list-group-item {
+    border: none;
+
+    padding: 1rem 2.1rem;
+    cursor: pointer;
+    background-color: #eef5ff;
+    font-weight: 530;
+  
+   
+  
+  }
+
+  .Jobs-skill .list-group1 {
+    background-color: var(--darkSkyblue-color);
+    color: white;
+  }
+
+
+
+  .Jobs-skill h1{
+   font-size: 2rem;
+   font-weight: 700;
+   color: var(--darkSkyblue-color);
+
+  }
+
+  
+  .Jobs-skill p{
+    color: var(--darkSkyblue-color);
+ 
+   }
+
+  .Jobs-skill .job-skill-text {
+    padding: 2rem;
+    text-align: justify;
+    color: rgb(102, 101, 101);
+   
+  }
+
+
+
+  /* Quality Services section */
+
+
+  .quality-services {
+    margin-top: 5rem;
+    position: relative;
+    
+  }
+
+  .quality-services .services-icon{
+    font-size: 2.5rem;
+    color: var(--darkSkyblue-color);
+    
+  }
+
+  .quality-services h5{
+    font-weight: 600;
+    
+  }
+  
+  .quality-services p{
+    color: rgb(109, 108, 108);
+    font-weight: 540;
+    
+  }
+
+
+
+  .quality-services .quality-text {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 700;
+  }
+ 
+  .quality-services .quality-text h1{
+   color: var(--darkSkyblue-color);
+   font-weight: 600;
+   font-size: 2.2rem;
+  }
+
+  .quality-services .quality-text p {
+    font-weight: 500;
+    color: var(--darkSkyblue-color);
+
+  }
+
+
+  .quality-services a{
+    color: #347dc0;
+    font-weight: 600;
+ 
+   }
+
+  .quality-services .services-link{
+    width: 40px;
+   height: 40px;
+   line-height: 40px;
+   padding-left: 0.9rem;
+   border-radius: 100%;
+   transition: 0.5s ease-in-out;
+   color: #347dc0;
+ 
+   }
+
+  .quality-services .services-link:hover{
+  
+   background-color: var(--darkSkyblue-color);
+   border-radius: 100%;
+   color: white;
+
+  }
+
+
+  /* connect More  */
+
+  .connect_more {
+    margin-top: 5rem;
+    background: url("../assets/img/connect_more/counter-bg.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .connect_more h1 {  
+    font-weight: 550;
+    color: var(--darkSkyblue-color);
+    
+  }
+
+  .connect_more p {
+    text-align: justify;
+    font-weight: 530;
+    color: rgb(129, 128, 128);
+    
+    
+  }
+
+  .connect_more .connect-btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--darkSkyblue-color);
+    margin-top: 1.6rem;
+    margin-bottom: 5rem;
+    transition: 0.5s ease-in-out;
+    font-weight: 700;
+    color: white;
+    margin-left: 8rem;
+   
+  }
+
+
+ 
+   
+  .connect_more .connect-btn:focus,
+  .connect_more .connect-btn:hover{
+      background-color: red;
+      box-shadow: none;
+     
+     
+  }
+  
+  /* footer section */
+
+
+  .footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    color: rgb(104, 103, 103);
+    padding-bottom: 2rem;
+    
+    font-weight: 500;
+    background-color: rgb(2, 23, 41);
+  }
+
+  .footer .social-icon{
+    margin-left: -15rem;
+  }
+.footer .social-icon li{
+    margin:6px;
+
+}
+
+.footer .social-icon a{
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 14px;
+    display: inline-block;
+    border:2px solid var(--darkSkyblue-color);
+    color: var(--darkSkyblue-color);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition:all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer .social-icon a:hover{
+    background-color: var(--darkSkyblue-color);
+    border-color: var(--darkSkyblue-color);
+    color: white;
+    box-shadow:  0 10px 15px 0 rgb(0 0 0 / 10%);
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+
+
+
+
+.footer .info-wrapper .single {
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+}
+.footer  .info-wrapper .single:last-child {
+	margin-bottom: 0;
+}
+.footer  .info-wrapper .single:last-child .icon {
+	position: relative;
+	margin-top: -20px;
+}
+.footer .info-wrapper .single .icon {
+	margin-right: 25px;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.footer .info-wrapper .single .icon li {
+	list-style: none;
+	position: relative;
+	z-index: 1;
+	color: var(--darkSkyblue-color);
+}
+.footer .info-wrapper .single .icon li i {
+	font-size: 14px;
+}
+.footer .info-wrapper .single .icon li::after {
+	position: absolute;
+	content: "";
+	height: 35px;
+	width: 35px;
+	background: #FFFFFF;
+	box-shadow: 0px 9px 18px #1810100d;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	border-radius: 50%;
+}
+.footer  .info-wrapper .single .info span {
+	display: block;
+	color: #DF0A0A;
+	font-size: 15px;
+	font-weight: 400;
+}
+.footer .info-wrapper .single .info a {
+	color: #1C2539;
+	font-size: 16px;
+	transition: 0.3s;
+	line-height: 22px;
+}
+.footer-three-single-wized .body .info-wrapper .single .info a:hover {
+	color: var(--darkSkyblue-color);
+}
+
+
+ .footer .info-wrapper .info{
+  margin-left: 2rem;
+}
+
+.footer .link-item {
+  list-style: none;
+}
+
+.footer .link-item .more-link{
+  color: rgb(190, 190, 190);
+}
+
+ .footer .link-item .more-link::before {
+
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  display: inline-block;
+  padding-right: 10px;
+  vertical-align: middle;
+  font-weight: 900;
+
+
+}
+
+.footer .link-item .more-link:hover {
+  transition: 0.5s ease-in-out;
+  margin-left: 0.5687rem;
+  color: var(--darkSkyblue-color);
+
+}
+
+  
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--darkSkyblue-color);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+}
+
+#myBtn:hover {
+  background-color: #f16331;
+}
+
+
+/* responsive css */
+
+ 
+
+
+ @media(max-width : 991px) {
+
+  /* ribban-bar */
+  .header .ribban-bar a,
+  .header .ribban-bar {
+   height: 200px;
+   text-align: center;
+   font-size: 1rem;
+   padding-top: 2rem;
+  
+   
+  
+  }
+
+
+  .header .ribban-bar .upload-resume {
+     display: none;
+   }
+
+  
+   .header .ribban-bar .social-icon,
+   .header .ribban-bar .social-icon ul li {
+     display: inline;
+     margin-left: 2rem;
+  
+  
+   }
+/* 
+Navigation bar */
+
+   .header-scrolled {
+      padding-top: 2rem;
+   
+  
+   }
+
+   /* job seekar section */
+
+   .job-seekar .title {
+     font-size: 1.4rem;
+   }
+
+   .job-seekar .opp-title{
+    font-size: 1rem;
+   }
+
+   .job-seekar .card {
+    margin-bottom: 2rem;
+   }
+
+   .job-seekar .card-body {
+    text-align: center;
+    margin-top: -2rem;
+   }
+
+   /* our client */
+
+   .our-client .card{
+    margin-bottom: 2rem;
+   }
+
+   .our-client .card .card-body{
+    text-align: center;
+    margin-top: -2rem;
+   }
+
+   .our-client .client-text h5{
+    font-size: 1.3rem;
+    margin-bottom: -1rem;
+    margin-top: -2rem;
+   }
+
+   /* about section */
+
+
+  
+   .about{
+    margin-top: 8rem;
+    text-align: center;
+   }
+
+   .about img{
+    margin-left: -6rem;
+   }
+
+   .about h1{
+   font-size: 1.5rem;
+   }
+
+   .about p{
+    text-align: center;
+   }
+
+   /* consultant section */
+
+   .Consultants {
+     margin-top: -8rem;
+   }
+
+   .Consultants .need-business h4{
+    font-size: 1.2rem;
+
+  }
+
+  .Consultants .btn-together {
+    margin-left: -1rem;
+  }
+
+  .question-business h5{
+    padding-top: -3rem;
+    font-size: 1rem;
+  }
+
+/* connect section */
+
+   .connect_more,
+   .connect_more h1,
+   .connect_more p{
+    text-align: center;
+    padding-top: 2rem;
+
+}
+
+.connect_more .connect-btn {
+  margin-left: -2rem;
+}
+
+
+/* footer */
+
+.footer  {
+  padding-left: 2rem;
+}
+
+.footer h2{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+.footer .info-wrapper .info{
+  margin-left: 2rem;
+}
+
+
+ }
